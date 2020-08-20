@@ -13,6 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+# 首页路由
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+# 注册页路由
+//Route::get('/register',function() {
+//	return view('register');
+//});
+#登录页路由
+Route::get('/login',function() {
+	return view('login');
+});
+
+
+Route::any('/register' , 'RegisterController@register');
